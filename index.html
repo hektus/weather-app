@@ -7,7 +7,40 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="wrapper">
+      <div class="weather__main">
+        <div class="search__field">
+          <ion-icon name="location-outline"></ion-icon>
+          <input type="text" placeholder="enter your location" />
+          <button><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+        <div class="weather__info">
+          <img src="" alt="" />
+          <span class="temperature"></span>
+          <span class="description"></span>
+        </div>
+        <div class="weather__other">
+          <div class="humidity">
+            <ion-icon name="cloudy-outline"></ion-icon>
+            <p class="percent">90%</p>
+            <p class="name">Humidity</p>
+          </div>
+          <div class="wind">
+            <ion-icon name="flash-outline"></ion-icon>
+            <p class="speed"></p>
+            <p class="name">Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="main.js"></script>
-    p
   </body>
 </html>
