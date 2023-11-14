@@ -1,0 +1,64 @@
+@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: yellow;
+}
+
+//main box
+
+.weather__main {
+  height: 500px;
+  width: 400px;
+  background-color: $main-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//search in main-box + icons
+
+.search__field {
+  width: 90%;
+  text-align: center;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+
+  input {
+    font-size: 25px;
+    height: 50px;
+    width: 90%;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ion-icon {
+    height: 30px;
+    width: 40px;
+  }
+
+  button {
+    height: 50px;
+    background: none;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

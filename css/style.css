@@ -1,1 +1,63 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: yellow;
+}
+
+.weather__main {
+  height: 500px;
+  width: 400px;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.search__field {
+  width: 90%;
+  text-align: center;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+}
+.search__field input {
+  font-size: 25px;
+  height: 50px;
+  width: 90%;
+  border: none;
+}
+.search__field input:focus {
+  outline: none;
+}
+.search__field ion-icon {
+  height: 30px;
+  width: 40px;
+}
+.search__field button {
+  height: 50px;
+  background: none;
+  border: none;
+}
+.search__field button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
