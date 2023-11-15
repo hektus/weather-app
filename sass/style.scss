@@ -18,6 +18,7 @@
 .weather__main {
   height: 500px;
   width: 400px;
+  border-radius: 10px;
   background-color: $main-color;
   position: absolute;
   top: 50%;
@@ -61,4 +62,65 @@
       cursor: pointer;
     }
   }
+}
+
+//middle weather info (img, temperature, description)
+.weather__info {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+  & img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.temperature {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 25px;
+}
+
+//footer (humidity, wind speed)
+.weather__other {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  color: white;
+  ion-icon {
+    font-size: 55px;
+  }
+}
+
+.humidity {
+  display: flex;
+  align-items: center;
+
+  &--percent {
+    font-size: 25px;
+  }
+}
+
+.wind {
+  display: flex;
+  align-items: center;
+
+  &--speed {
+    font-size: 25px;
+  }
+
+  &--name {
+    font-size: 15px;
+  }
+}
+
+.other_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }

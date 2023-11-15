@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -15,12 +15,13 @@
 .weather__main {
   height: 500px;
   width: 400px;
+  border-radius: 10px;
   background-color: green;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .search__field {
@@ -31,11 +32,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: 1px solid black;
   background-color: white;
   border-radius: 10px;
@@ -60,4 +61,76 @@
 }
 .search__field button:hover {
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.weather__info {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+}
+.weather__info img {
+  width: 150px;
+  height: 150px;
+}
+
+.temperature {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 25px;
+}
+
+.weather__other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0 auto;
+  color: white;
+}
+.weather__other ion-icon {
+  font-size: 55px;
+}
+
+.humidity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.humidity--percent {
+  font-size: 25px;
+}
+
+.wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wind--speed {
+  font-size: 25px;
+}
+.wind--name {
+  font-size: 15px;
+}
+
+.other_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 10px;
+} /*# sourceMappingURL=style.css.map */
