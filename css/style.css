@@ -23,6 +23,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: solid 2px white;
+  -webkit-box-shadow: 0 0 20px red;
+          box-shadow: 0 0 20px red;
 }
 
 .search__field {
