@@ -1,4 +1,12 @@
+const weatherMain = document.querySelector(".weather__main");
 const searchButton = document.querySelector(".search__field button");
+const weatherImg = document.querySelector(".weather__info img");
+const temperature = document.querySelector(".temperature");
+const description = document.querySelector(".description");
+const humidity = document.querySelector(".humidity--percent");
+const windSpeed = document.querySelector(".wind--speed");
+const weatherOther = document.querySelector(".weather__other");
+const contentDiv = document.querySelector(".content");
 
 const showWeather = () => {
   //api settings
@@ -11,6 +19,7 @@ const showWeather = () => {
   fetch(apiUrl)
     .then((response) => {
       if (!response.ok) {
+        error404();
         throw new Error("Response was not ok");
       }
       return response.json();
@@ -27,12 +36,10 @@ const showWeather = () => {
 };
 
 function displayWeatherInfo(temp, desc, hum, wind) {
-  const temperature = document.querySelector(".temperature");
-  const description = document.querySelector(".description");
-  const humidity = document.querySelector(".humidity--percent");
-  const windSpeed = document.querySelector(".wind--speed");
-  const weatherImg = document.querySelector(".weather__info img");
-
+  weatherOther.style.display = "flex";
+  weatherMain.classList.add("weather__main--active");
+  weatherMain.classList.remove("weather__main--notFound");
+  contentDiv.style.transform = "translateY(0)";
   //convert kelvin to celsius and fixed to 1 places after comma
   //display data
   temperature.textContent = `${(temp - 273.15).toFixed(1)}°C`;
@@ -63,10 +70,17 @@ function displayWeatherInfo(temp, desc, hum, wind) {
   if (rain.includes(desc)) {
     weatherImg.src = `./images/rain.png`;
   }
+}
 
-  // if (desc === "Rain") {
-  //   weatherImg.innerHTML = `<img src="./images/${desc}.png" alt="" />`;
-  // }
+//display IMG err404 (incorrectly entered town in searching)
+function error404() {
+  weatherMain.classList.add("weather__main--notFound");
+  weatherMain.classList.remove("weather__main--active");
+  weatherImg.src = `./images/404.png`;
+  weatherOther.style.display = "none";
+  temperature.textContent = "";
+  description.textContent = "Location Not Found";
+  contentDiv.style.transform = "translateY(0)";
 }
 
 searchButton.addEventListener("click", showWeather);

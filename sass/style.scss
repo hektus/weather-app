@@ -16,7 +16,8 @@
 //main box
 
 .weather__main {
-  height: 500px;
+  height: 80px; //500  80 oryginalnie
+  overflow: hidden;
   width: 400px;
   border-radius: 10px;
   background-color: $main-color;
@@ -26,11 +27,19 @@
   transform: translate(-50%, -50%);
   border: solid 2px white;
   box-shadow: 0 0 20px red;
+  transition: height 2s ease;
+  &--active {
+    height: 500px;
+  }
+  &--notFound {
+    height: 330px;
+  }
 }
 
 //search in main-box + icons
 
 .search__field {
+  position: relative;
   width: 90%;
   text-align: center;
   margin: 10px auto;
@@ -40,7 +49,7 @@
   border: 1px solid black;
   background-color: white;
   border-radius: 10px;
-
+  z-index: 3;
   input {
     font-size: 25px;
     height: 50px;
@@ -66,8 +75,15 @@
   }
 }
 
+.content {
+  transition: 3s;
+  overflow: hidden;
+  transform: translateY(-120%);
+}
+
 //middle weather info (img, temperature, description)
 .weather__info {
+  transition: height 2s ease;
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
@@ -102,7 +118,7 @@
 .humidity {
   display: flex;
   align-items: center;
-
+  overflow: hidden;
   &--percent {
     font-size: 25px;
   }

@@ -13,7 +13,8 @@
 }
 
 .weather__main {
-  height: 500px;
+  height: 80px;
+  overflow: hidden;
   width: 400px;
   border-radius: 10px;
   background-color: black;
@@ -25,9 +26,18 @@
   border: solid 2px white;
   -webkit-box-shadow: 0 0 20px red;
           box-shadow: 0 0 20px red;
+  -webkit-transition: height 2s ease;
+  transition: height 2s ease;
+}
+.weather__main--active {
+  height: 500px;
+}
+.weather__main--notFound {
+  height: 330px;
 }
 
 .search__field {
+  position: relative;
   width: 90%;
   text-align: center;
   margin: 10px auto;
@@ -43,6 +53,7 @@
   border: 1px solid black;
   background-color: white;
   border-radius: 10px;
+  z-index: 3;
 }
 .search__field input {
   font-size: 25px;
@@ -66,7 +77,17 @@
   cursor: pointer;
 }
 
+.content {
+  -webkit-transition: 3s;
+  transition: 3s;
+  overflow: hidden;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+}
+
 .weather__info {
+  -webkit-transition: height 2s ease;
+  transition: height 2s ease;
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
@@ -107,6 +128,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 .humidity--percent {
   font-size: 25px;
